@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
-mongoose.connect( 'replace DB URI here', {useNewUrlParser: true} )
+mongoose.connect( 'mongodb+srv://nikhilbhati:nikhil123@cluster0.zplbv.mongodb.net/test', {useNewUrlParser: true} )
 const db = mongoose.connection
 db.on('error', error => console.error(error))
 db.once('open',()=> console.log('Connected to Mongoose'))
